@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python
+    steps:
+      - checkout
+      - run: git clone https://github.com/nittc-meister/test-2019
+      - run: python ./test-2019/test-tutorial.py
